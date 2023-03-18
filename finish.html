@@ -6,7 +6,9 @@
 	<body>
 		<form method = 'POST' action = '/view'>
 			<p>Глеб</p>
-			<p>{{ index }}
+			{% for temp in temps %}
+				<p>{{ temp[:temp.find("</i>")] }}</p>
+			{% endfor %}
 		</form>
 	</body>
 </html>
