@@ -6,8 +6,10 @@
 	<body>
 		<form method = 'POST' action = '/view'>
 			<p>Глеб</p>
-			{% for temp in temps %}
-				<p>{{ temp[:temp.find("</i>")] }}</p>
+			{% for i in range(6) %}
+				<p>{{ days[i] }}</p>
+				<p> День     Ночь </p>
+				<p>От {{ temps[i*2].split('..')[0] }} до {{ temps[i*2].split('..')[1] }} - От {{ temps[i*2+1].split('..')[0] }} до {{ temps[i*2 + 1].split('..')[1] }}</p>
 			{% endfor %}
 		</form>
 	</body>
